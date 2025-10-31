@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PolliPet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .card-img-top {
+        height: 200px;
+        object-fit: contain;
+        background-color: white;
+        }
+
+        .card {
+        width: 14rem;
+        height: 100%;
+        }
+
+    </style>
+
+  </head>
+  <body class="bg-primary text-white">
+
+    <nav class="navbar bg-warning fixed-top navbar-light">
+      <div class="container-fluid">
+        <span class="navbar-brand" onclick="navegar('tela-home')">PolliPet</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PolliPet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <button class="nav-link active" aria-current="page" onclick="navegar('tela-home')">Página Inicial</button>
+              </li>
+              <li class="nav-item-petiscos">
+                <button class="nav-link" onclick="navegar('tela-petiscos')">Petiscos</button>
+              </li>
+              <li class="nav-item-roupas">
+                <button class="nav-link" onclick="navegar('tela-roupas')">Roupas para pets</button>
+              </li>
+              <li class="nav-item-acessorios">
+                <button class="nav-link" onclick="navegar('tela-acessorios')">Acessórios</button>
+              </li>
+              <li class="nav-item-farmacia">
+                <button class="nav-link" onclick="navegar('tela-farmacia')">Farmácia</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="tela" class="container mt-5 pt-4">
+
+      <!-- HOME -->
+      <div id="tela-home" class="tela row row-cols-2 row-cols-md-4 g-4 mt-2 show">
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('coleira para pets', 'src/coleira.jpg', 'coleira', 'R$ 50,00')">
+            <img src="src/coleira.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Coleira para cachorro</p>
+              <small>Diferentes tamanhos</small>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('peitoral', 'src/peitoral.png', 'peitoral', 'R$ 70,00')">
+            <img src="src/peitoral.png" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Peitoral para cachorro</p>
+              <small>Diferentes tamanhos</small>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('ração', 'src/racao-cachorro.jpg', 'racao', 'R$ 50,00')">
+            <img src="src/racao-cachorro.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Ração Pedigree</p>
+              <small>Sabor carne</small>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('ração gato', 'src/racao-cat.png', 'racao-cat', 'R$ 50,00')">
+            <img src="src/racao-cat.png" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Ração PremieR</p>
+              <small>Sabor salmão</small>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('roupa gato', 'src/roupa-cat.jpg', 'roupa-gato', 'R$ 80,00')">
+            <img src="src/roupa-cat.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Roupa para gato</p>
+              <small>Diferentes tamanhos</small>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('roupa cachorro', 'src/roupas-dog.png', 'roupa-dog', 'R$ 90,00')">
+            <img src="src/roupas-dog.png" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Roupa para cachorro</p>
+              <small>Diferentes tamanhos</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('remédio para gato', 'src/remedio-cat.png', 'remedio-cat', 'R$ 30,00')">
+            <img src="src/remedio-cat.png" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Remédio para gato</p>
+              <small>Alívio para dor</small>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('remédio para cachorro', 'src/remedio-dog.png', 'remedio-dog', 'R$ 30,00')">
+            <img src="src/remedio-dog.png" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Remédio para cachorro</p>
+              <small>Alívio para dor</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+      <!-- Tela ACESSORIOS -->
+
+      <div id="tela-acessorios" class="tela row row-cols-2 row-cols-md-4 g-4 collapse">
+        
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('Peitoral para cachorro', 'src/coleira.jpg', 'remedio-dog', 'R$ 30,00')">
+            <img src="src/coleira.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Coleira para cachorro</p>
+              <small>Diferentes tamanhos</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card" onclick="mostrarDetalhes('peitoral para cachorro', 'src/peitoral.png', 'peitoral-cachorro', 'R$ 70,00')">
+            <img src="src/peitoral.png" class="card-img-top">
+            <div class="card-body text-center">
+              <p class="fw-semibold mb-1">Peitoral para cachorro</p>
+              <small>Diferentes tamanhos</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tela PETISCOS -->
+
+      <div id="tela-petiscos" class="tela row row-cols-2 row-cols-md-4 g-4 collapse">
+        <a href="racao-dog.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/racao-cachorro.jpg" class="card-img-top" alt="ração para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Ração Pedigree</p>
+      </div>
+
+      <!-- Tela PETISCOS -->
+
+      <div id="tela-petiscos" class="tela row row-cols-2 row-cols-md-4 g-4 collapse">
+        <a href="racao-dog.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/racao-cachorro.jpg" class="card-img-top" alt="ração para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Ração Pedigree</p>
+              <p class="card-text">Sabor carne</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="racao-cat.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/racao-cat.png" class="card-img-top" alt="ração para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Ração PremieR</p>
+              <p class="card-text">Sabor Salmão</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Tela FARMACIA -->
+
+      <div id="tela-farmacia" class="tela row row-cols-2 row-cols-md-4 g-4 collapse">
+        <a href="remedio-gato.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/remedio-cat.png" class="card-img-top" alt="remédio para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Remédio para gato</p>
+              <p class="card-text">Alívio para dor</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="remedio-dog.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/remedio-dog.png" class="card-img-top" alt="remédio para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Remédio para cachorro</p>
+              <p class="card-text">Alívio para dor</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Tela ROUPAS -->
+
+      <div id="tela-roupas" class="tela row row-cols-2 row-cols-md-4 g-4 collapse">
+        <a href="roupa-gato.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/roupa-cat.jpg" class="card-img-top" alt="roupa para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Roupa para gato</p>
+              <p class="card-text">Diferentes tamanhos</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="cachorro-roupa.html">
+          <div class="card" style="width: 14rem;">
+            <img src="src/roupas-dog.png" class="card-img-top" alt="roupa para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Roupa para cachorro</p>
+              <p class="card-text">Diferentes tamanhos</p>
+            </div>
+          </div>
+        </a>
+      </div>
+        
+      <div id="tela-produto" class="tela collapse" >
+            <button class="btn btn-secondary mb-3" onclick="voltar()">← Voltar</button>
+            <div id="detalhes-produto" class="card shadow p-3"></div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
