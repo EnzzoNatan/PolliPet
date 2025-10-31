@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PolliPet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+      .card-img-top {
+        height: 200px;         
+        object-fit: contain;   
+        background-color: white; /* opcional: fundo para imagens PNG transparentes */
+      }
+
+      .card {
+        width: 14rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+
+  </head>
+  <body class="bg-secondary text-white">
+
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">PolliPet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PolliPet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Página Inicial</a>
+              </li>
+              <li class="nav-item-petiscos">
+                <a class="nav-link" href="petiscos.html">Petiscos</a>
+              </li>
+              <li class="nav-item-roupas">
+                <a class="nav-link" href="roupas.html">Roupas para pets</a>
+              </li>
+              <li class="nav-item-acessorios">
+                <a class="nav-link" href="acessorios.html">Acessórios</a>
+              </li>
+              <li class="nav-item-farmacia">
+                <a class="nav-link" href="farmacia.html">Farmácia</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div div id="tela" class="container mt-5">
+
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+    
+        <a href="">
+          <div class="card" style="width: 14rem;">
+            <img src="src/remedio-cat.png" class="card-img-top" alt="remédio para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Remédio para gato</p>
+              <p class="card-text">Alívio para dor</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="card" style="width: 14rem;">
+            <img src="src/remedio-dog.png" class="card-img-top" alt="remédio para pets">
+            <div class="card-body">
+              <p class="card-text text-decoration-none">Remédio para cachorro</p>
+              <p class="card-text">Alívio para dor</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
