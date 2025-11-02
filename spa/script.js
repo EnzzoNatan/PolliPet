@@ -35,3 +35,7 @@ function mostrarDetalhes(produto, imagem, categoria, preco) {
     </div>
   `
 }
+
+if ('serviceWorker' in navigator) {  
+    navigator.serviceWorker.register("./service-worker.js");
+}
